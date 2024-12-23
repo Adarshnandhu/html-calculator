@@ -1,0 +1,43 @@
+/* Set the background color of the entire body to black */
+body{
+    background-color:#000000;
+}
+/* Style the calculator container */
+
+.calculator{
+    border: 2px solid #ff8800;/* Orange border around the calculator */
+    max-width: 400px; /* Restrict maximum width of the calculator (commented out) */
+   margin: 5rem auto;/* Center the calculator on the page with margin (commented out) */
+    padding: 20px;/* Add padding inside the calculator container */
+    border-radius: 10px; /* Round the corners of the calculator */
+        
+}
+/* Create a grid layout for the calculator buttons */
+.grid-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 equally spaced columns */
+    gap: 10px; /* Space between the grid items */
+}
+
+
+.calculator button 
+{
+  background-color: grey; /* Button background color */
+  color: black; /* Button text color */
+  padding: 15px 32px; /* Padding inside buttons */
+  text-align: center; /* Center text inside the button */
+  text-decoration: none; /* Remove any text decoration */
+  display: inline-block; /* Display buttons inline */
+  font-size: 1.5rem; /* Font size for button text */
+}
+
+/* Style the calculator input field */ .calculator input { 
+font-size: 1.5rem; /* Font size for input text */ 
+text-align: right; /* Align input text to the right */ 
+}
+/* Style the 'AC' button specifically */
+
+#ac
+{
+    background-color: orange;
+}

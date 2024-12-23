@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define character encoding and responsive viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">  
+
+    <!-- Page title -->
+    <title>Calculator</title>
+</head>
+<body> 
+    <!-- Container to center the calculator -->
+    <div class="container d-flex justify-content-center align-items-center p-3" style="min-height: 100vh;">
+        <!-- Calculator container -->
+        <div class="calculator">
+            <!-- Input field to display the entered values and results -->
+            <input type="text" class="form-control mb-3" id="display" readonly>
+
+            <!-- Grid container for calculator buttons -->
+            <div class="grid-container">
+                <!-- Button for clearing the display -->
+                <div class=""><button class="btn btn-secondary w-100" id="ac" onclick="clearDisplay()">AC</button></div>
+                
+                <!-- Button for square root -->
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('&radic;')">&radic;</button></div>
+                
+                <!-- Button to delete the last character -->
+                <div class=""><button class="btn btn-secondary w-100" onclick="deleteLast()">Del</button></div>
+                
+                <!-- Button for division -->
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('/')">/</button></div>
+
+                <!-- Numeric and operation buttons -->
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('7')">7</button></div>
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('8')">8</button></div>
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('9')">9</button></div>
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('*')">*</button></div>
+
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('4')">4</button></div>
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('5')">5</button></div>
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('6')">6</button></div>
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('-')">-</button></div>
+
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('1')">1</button></div>
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('2')">2</button></div>
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('3')">3</button></div>
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('+')">+</button></div>
+
+                <!-- Button for zero -->
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('0')">0</button></div>
+                
+                <!-- Button for modulus -->
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('%')">%</button></div>
+                
+                <!-- Button for decimal point -->
+                <div class=""><button class="btn btn-secondary w-100" onclick="appendToDisplay('.')">.</button></div>
+                
+                <!-- Button to calculate the result -->
+                <div class=""><button class="btn btn-secondary w-100" onclick="calculateResult()">=</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
